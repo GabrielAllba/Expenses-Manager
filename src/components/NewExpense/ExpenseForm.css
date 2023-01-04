@@ -1,0 +1,50 @@
+.new-expense__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.new-expense__control{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.new-expense__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.new-expense__control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.new-expense__actions {
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+}
+.new-expense__actions button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+}
+.new-expense__actions button:hover{
+  background: #439d46;
+  cursor: pointer;
+}
