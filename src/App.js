@@ -10,10 +10,11 @@ import ExpensesFilter from './components/Expenses/ExpensesFilter';
    {id: 'e2',
      title: "Motorcycle Insurance",
      amount: 24.67,
-     date: new Date(2021, 6, 22),
+     date: new Date(2022, 6, 22),
    },
-   {id: 'e3', title: "Bike Insurance", amount: 25.67, date: new Date(2020, 1, 18) },
-   {id: 'e4', title: "Truck Insurance", amount: 28.67, date: new Date(2019, 2, 11) },
+   {id: 'e3', title: "Bike Insurance", amount: 25.67, date: new Date(2022, 1, 18) },
+   {id: 'e4', title: "Truck Insurance", amount: 28.67, date: new Date(2022, 2, 11) },
+   {id: 'e5', title: "2020 Insurance", amount: 28.67, date: new Date(2022, 2, 11) },
  ];
 
 const App = () => {

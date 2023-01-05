@@ -1,8 +1,10 @@
 import ExpenseItem from './ExpenseItem'
 import ExpensesFilter from './ExpensesFilter'
+
 import Card from '../UI/Card'
 import './Expenses.css'
 import { useState } from 'react'
+import ExpensesChart from './ExpensesChart'
 
 const Expenses = (props) => {
 const changeFilter = (value) => {
@@ -16,7 +18,7 @@ const handleOnChangeFilterMonth = (value) => {
       console.log(x)
     }
 
-    const [selectYear, setYear] = useState(2020);
+    const [selectYear, setYear] = useState(2022);
 
     const handleChangeYear = (value) => {
       setYear(value)
@@ -36,7 +38,8 @@ const handleOnChangeFilterMonth = (value) => {
             expenses={props.item}
             onChangeYear={handleChangeYear}
           ></ExpensesFilter>
-          {props.item.length === 0 ? (
+          <ExpensesChart expenses={filteredArray}></ExpensesChart>
+          {filteredArray.length === 0 ? (
             <p>No expenses found</p>
           ) : (
             filteredArray.map((expense) => (

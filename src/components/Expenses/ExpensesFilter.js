@@ -4,7 +4,7 @@ import "./ExpensesFilter.css";
 
 const ExpensesFilter = (props) => {
 
-    const [selectedFilter, enteredFilter] = useState(2020)
+    const [selectedFilter, enteredFilter] = useState(2022)
     
     
 

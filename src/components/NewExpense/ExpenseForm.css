@@ -25,7 +25,8 @@
   max-width: 100%;
 }
 
-.new-expense__actions {
+.new-expense__actions,
+.new-expense__cancel{
   text-align: right;
   display: flex;
   justify-content: center;
@@ -44,7 +45,24 @@
   font-size: 16px;
 
 }
-.new-expense__actions button:hover{
+
+.new-expense__actions button:hover,
+.new-expense__cancel button:hover{
   background: #439d46;
   cursor: pointer;
+}
+.new-expense__cancel button:hover{
+  background: rgb(175, 56, 56);
+}
+.new-expense__cancel button{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: rgb(212, 76, 76);
 }
