@@ -20,7 +20,7 @@
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  outline: none;
   width: 20rem;
   max-width: 100%;
 }
@@ -65,4 +65,12 @@
   align-items: center;
   font-size: 16px;
   background-color: rgb(212, 76, 76);
+}
+
+
+.valid{
+  background: rgb(205, 226, 255)
+}
+.invalid{
+  background: rgb(255, 158, 158)
 }

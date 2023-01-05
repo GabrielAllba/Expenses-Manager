@@ -14,6 +14,9 @@ const ExpenseForm = (props) => {
         enteredDate: ''
     })
 
+    const [isValid, setIsValid] = useState(false)
+    const [isValidAmount, setAmount] = useState(false)
+
     const titleChangeHandler = (event) => {
         SetUserInput((prevState) => {
             
@@ -21,6 +24,8 @@ const ExpenseForm = (props) => {
                 ...prevState, enteredTitle: event.target.value
             }
         })
+
+        setIsValid(true)
         
     }
     const amountChangeHandler = (event) => {
@@ -28,6 +33,7 @@ const ExpenseForm = (props) => {
           ...userInput,
           enteredAmount: event.target.value,
         });
+        setAmount(true)
     }
     const dateChangeHandler = (event) => {
         SetUserInput({
@@ -75,7 +81,12 @@ const ExpenseForm = (props) => {
             <div className="new-expense__control">
               <label>Title</label>
               <input
-              required
+                style={{
+                  borderColor: isValid
+                    ? "rgb(141 197 255)"
+                    : "rgb(243,142,154)",
+                }}
+                required
                 value={userInput.enteredTitle}
                 type="text"
                 onChange={titleChangeHandler}
@@ -84,7 +95,8 @@ const ExpenseForm = (props) => {
             <div className="new-expense__control">
               <label>Amount</label>
               <input
-              required
+                className={`${isValidAmount? 'valid' : 'invalid'}`}
+                required
                 value={userInput.enteredAmount}
                 type="number"
                 min="0.01"
@@ -94,7 +106,8 @@ const ExpenseForm = (props) => {
             </div>
             <div className="new-expense__control">
               <label>Date</label>
-              <input required
+              <input
+                required
                 value={userInput.enteredDate}
                 type="date"
                 min="2019-01-01"
